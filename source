@@ -1,14 +1,90 @@
-import requests
+import os
+import sys
+import time
+
+def banner():
+    print('''
+    
+   _____ ____  _   _ ______ _____ _____ _    _ _____  ______ 
+  / ____/ __ \| \ | |  ____|_   _/ ____| |  | |  __ \|  ____|
+ | |   | |  | |  \| | |__    | || |  __| |  | | |__) | |__   
+ | |   | |  | | . ` |  __|   | || | |_ | |  | |  _  /|  __|  
+ | |___| |__| | |\  | |     _| || |__| | |__| | | \ \| |____ 
+  \_____\____/|_| \_|_|    |_____\_____|\____/|_|  \_\______|
+                                                             
+    ''');
+
+def funMenu():
+    print('''
+    1. install PHP
+    2. install composer
+    3. install mysql
+    4. install apache server
+    5. install laravel
+    0. Exit
+    
+    ''')
+
+    print('Enter the function : ', end=" ")
+    
+def update():
+    os.system('sudo apt update');
+
+def main():
+    # os.system('clear')
+    banner()
+    funMenu()
+    x = input()
+    # update()
+    if(x == "1"):
+        print("install PHP"); 
+    
+    if(x == "2"):
+        print("install composer");
+
+    if(x == "3"):
+        print("install mysql");
+
+    if(x == "4"):
+        print("install apache");
+
+    if(x == "5"):
+        print("install laravel");
+
+    if(x == "0"):
+        print("Exit");
+        exit()
+    
 
 
-y= 0;
-while True:
-    y += 1;
-    url = 'https://scienceacademy.lk/blog/bloguser/golike.php'
-    myobj = {'blid': 303}
 
-    x = requests.post(url, data = myobj)
+    # install apache2
+    # os.system('sudo apt install apache2 -y');
 
-    print(x);
-    print (y);
-     
+    # install composer 
+    # os.system('sudo apt install composer -y');
+
+    # install php
+    # os.system('sudo apt install php -y);
+
+    # install mysql
+    # os.system('sudo apt install mariadb-server -y');
+
+    # print(
+    #     ''' 
+    #     Remove anonymous users? [Y/n] y
+    #     Disallow root login remotely? [Y/n] n
+    #     Remove test database and access to it? [Y/n] y
+    #     Reload privilege tables now? [Y/n] y
+    #     Password should Cantain 8 Char, Captial, Simple letter, Special Char
+    #     '''
+    # );
+
+    # os.system('sudo mysql_secure_installation');
+
+    # install laravel gloabelly
+    # os.system('sudo composer global require laravel/installer');
+    
+running = True
+while running:
+    main()
