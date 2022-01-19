@@ -75,7 +75,6 @@ def main():
     print(  bcolors.GREEN  + ' Configuring MSYQL8' + bcolors.ENDC),
     os.system('sudo apt update');
     os.system('sudo apt install mysql-server -y');
-    os.system('sudo mysql_secure_installation');
     print(  bcolors.GREEN  + '''
     .. VALIDATE PASSWORD COMPONENT -- y
 	.. password validation policy -- 2
@@ -87,6 +86,7 @@ def main():
 	.. Reload privilege tables -- y
     ''' + bcolors.ENDC),
     print('')
+    os.system('sudo mysql_secure_installation');
     os.system('mysql -V');
 
 # ----------- composer config
@@ -96,7 +96,7 @@ def main():
     os.system('sudo apt update');
     os.system('sudo apt install curl unzip -y');
     os.system('sudo apt install php php-curl -y');
-    os.system('sudo apt install composer');
+    os.system('sudo apt install composer -y');
 
 
 
