@@ -9,3 +9,5 @@ or
 ```python3 main_latest.py```
 
 > appreciated to fork
+
+https://linoxide.com/how-to-install-laravel-on-ubuntu-20-04/
